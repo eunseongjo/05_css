@@ -1,0 +1,104 @@
+        /*속성값과 일치하는 객체(태그, 요소)선택*/
+        div[name=name2]{
+            background: orange;
+        }
+
+        /*속성 안의 값이 특정 값을 단어(띄어쓰기 단위)로써 포함하는 객체 선택*/
+        div[name~=name1]{
+            background: yellow;
+        }
+
+        /*속성 값이 특정 값과 일치하거나 '-'문자가 곧바로 해당 값 뒤에 따라 붙는 객체 선택*/
+        div[class|=class]{
+            background: cyan;
+        }
+
+        /*속성 값을 가지고 있으며, 접두사로 특정 값이 포함되어 있는 객체 선택*/
+        /* div[name^=name]{
+            background: blue;
+        } */
+
+        /*속성 안의 값이 특정 값으로 끝나는(접미사) 객체 선택*/
+        div[class$=class]{
+            color: white;
+        }
+
+        /*속성 안의 값이 튻정 값을 포함하는 객체 선택*/
+        div[class*=div]{
+            background: yellow;
+            color:red;
+        }
+
+        /*자손 선택자*/
+        #test1>h4{
+            background: pink;
+        }
+
+        #test1>ul>li{
+            background: brown;
+        }
+
+        /*후손 선택자*/
+        #test1 ul{
+            background: yellow;
+        }
+
+        #test1 ul{
+            color: rebeccapurple;
+        }
+
+        /*형제관계 선택자(동위 선택자)*/
+        #div-test1{
+            background: red;
+        }
+
+        /*해당 요소 바로 다음에 특정 타입의 요소를 모두 선택*/
+        #div-test1 + div{
+            background: yellow;
+        }
+
+        /*해당 요소보다 뒤에 존재하는 특정 타입의 요소를 모두 선택*/
+        /* #div-test2 ~ div{
+            background: purple;
+
+        } */
+
+        #active-test, #hover-test{
+            width: 300px;
+            height: 300px;
+            background: rgb(102, 126, 233);
+        }
+        
+        #active-test:active{
+            background: rgb(245, 245, 121);
+            color: rgb(238, 48, 48);
+        }
+
+        #hover-test:hover{
+            cursor: pointer;
+            background: rgb(166, 226, 226);
+            color: rgb(136, 57, 209);
+        }
+
+        input[type=checkbox]:checked{
+            width: 20px;
+            height: 20px;
+        }
+
+        #userId:focus, #userPwd:focus{
+            background: greenyellow;
+        }
+
+        option:disabled{
+            background: red;
+            color:aqua
+        }
+        option:enabled{
+            background: rgb(240, 240, 197);
+        }
+
+        input:disabled{
+            background: rgb(165, 161, 161);
+        }
+
+
